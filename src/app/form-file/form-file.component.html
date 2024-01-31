@@ -1,0 +1,31 @@
+<p>form-file works!</p>
+
+<!-- reactive form -->
+<!-- 1 -->
+<!-- <form (submit)="showName()">
+  <input type="text" [formControl]="name" name="name" />
+  <input type="submit" value="Submit" />
+</form>
+
+<p>{{name.value }}</p> -->
+
+<!-- 2 -->
+<form [formGroup] = "firstForm" (ngSubmit) = "showName()">
+  <input type="text" formControlName="name" /><br/>
+  <input type="text" formControlName = "password" /><br/>
+  <input type="submit" value="submit" [disabled]="!firstForm.valid" />
+  <input type="button" value="Reset" (click) = "firstForm.reset()" />
+</form>
+
+<p>{{firstForm.value.name + ' ' + firstForm.value.password}}</p>
+
+
+
+<!-- template-drive form -->
+<!-- <form (ngSubmit)="showName()" #myForm="ngForm">
+  <input type="text" [(ngModel)]="name" name="name" required />
+  <input type="submit" value="Submit" [disabled]="!myForm.form.valid" />
+</form>
+<p>{{name }}</p> -->
+
+

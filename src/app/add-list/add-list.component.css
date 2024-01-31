@@ -1,0 +1,19 @@
+form div {
+  padding: 5px;
+}
+form button {
+  margin-top: 10px;
+}
+form button:disabled {
+  background-color: gray;
+}
+form label {
+  font-weight: bold;
+}
+
+input.ng-valid {
+  background-color: #79ba6a;
+}
+input.ng-invalid {
+  background-color: #f58c84;
+}
